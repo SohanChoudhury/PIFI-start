@@ -92,17 +92,17 @@ a {
     right: 0;
     background: #0388E5;
     /* Old browsers */
-    background: -moz-linear-gradient(left, #D400FF 0%, #F400FF 100%);
+    background: -moz-linear-gradient(left, #0388E5 0%, #07BDF4 100%);
     /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #D400FF), color-stop(100%, #F400FF));
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0388E5), color-stop(100%, #07BDF4));
     /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #D400FF 0%, #F400FF 100%);
+    background: -webkit-linear-gradient(left, #0388E5 0%, #07BDF4 100%);
     /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #D400FF 0%, #F400FF 100%);
+    background: -o-linear-gradient(left, #0388E5 0%, #07BDF4 100%);
     /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #D400FF 0%, #F400FF 100%);
+    background: -ms-linear-gradient(left, #0388E5 0%, #07BDF4 100%);
     /* IE10+ */
-    background: linear-gradient(to right, #D400FF 0%, #F400FF 100%);
+    background: linear-gradient(to right, #0388E5 0%, #07BDF4 100%);
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$left, endColorstr=$right,GradientType=1 );
     /* IE6-9 */
@@ -127,7 +127,7 @@ a {
         -webkit-transition: color 0.2s;
         transition: color 0.2s; }
         .layout-wrapper .layout-topbar .layout-topbar-icons a:hover {
-          color: #FF78FF; }
+          color: #77c7ff; }
         .layout-wrapper .layout-topbar .layout-topbar-icons a span.layout-topbar-icon {
           font-size: 2em; }
         .layout-wrapper .layout-topbar .layout-topbar-icons a span.layout-topbar-item-text {
@@ -202,7 +202,7 @@ a {
           top: -1px;
           right: 0px; }
         .layout-wrapper .layout-topbar .layout-topbar-icons .layout-topbar-search:hover input {
-          border-bottom-color: #FF78FF; }
+          border-bottom-color: #77c7ff; }
           .layout-wrapper .layout-topbar .layout-topbar-icons .layout-topbar-search:hover input::-webkit-input-placeholder {
             opacity: 1; }
           .layout-wrapper .layout-topbar .layout-topbar-icons .layout-topbar-search:hover input:-moz-placeholder {
@@ -212,7 +212,7 @@ a {
           .layout-wrapper .layout-topbar .layout-topbar-icons .layout-topbar-search:hover input:-ms-input-placeholder {
             opacity: 1; }
         .layout-wrapper .layout-topbar .layout-topbar-icons .layout-topbar-search:hover .layout-topbar-search-icon {
-          color: #FF78FF; }
+          color: #77c7ff; }
     .layout-wrapper .layout-topbar .layout-menu-button {
       cursor: pointer;
       display: inline-block;
@@ -225,7 +225,7 @@ a {
       .layout-wrapper .layout-topbar .layout-menu-button span {
         font-size: 2em; }
       .layout-wrapper .layout-topbar .layout-menu-button:hover {
-        color: #723572; }
+        color: #77c7ff; }
     .layout-wrapper .layout-topbar a {
       cursor: pointer; }
   .layout-wrapper .p-scrollpanel {
@@ -512,22 +512,6 @@ h2 {
 .card {
   background-color: #ffffff;
   padding: 1em;
-  margin-bottom: 16px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
-  .card.card-w-title {
-    padding-bottom: 2em; }
-  .card h1 {
-    margin: .5em 0 .5em 0;
-    border-bottom: 1px solid #d5d5d5;
-    padding: .1em;
-    font-size: 24px; }
-    .card h1:first-child {
-      margin: 0 0 .5em 0; }
-
-.slick {
-  background-color: #ffffff;
   margin-bottom: 16px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
