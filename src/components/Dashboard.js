@@ -11,6 +11,9 @@ import {DataTable} from 'primereact/datatable';
 import {Column} from 'primereact/column';
 import {Schedule} from 'primereact/schedule';
 
+import {ProgressBar} from 'primereact/progressbar';
+
+
 export class Dashboard extends Component {
 
     constructor() {
@@ -23,18 +26,57 @@ export class Dashboard extends Component {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                     {
-                        label: 'First Dataset',
-                        data: [65, 59, 80, 81, 56, 55, 40],
+                        label: 'Robinhood',
+                        data: [3802, 3689, 4350, 3253, 5534, 5700, 5230],
                         fill: false,
-                        borderColor: '#007be5'
+                        borderColor: '#38E599'
                     },
                     {
-                        label: 'Second Dataset',
-                        data: [28, 48, 40, 19, 86, 27, 90],
+                        label: 'TD Ameritrade',
+                        data: [2450, 2232, 3349, 4200, 3912, 4102, 3351],
                         fill: false,
-                        borderColor: '#20d077'
+                        borderColor: '#18BF1E'
+                    },
+                    {
+                        label: 'Wells Fargo',
+                        data: [1509, 3400, 2800, 5702, 6530, 6328, 7028],
+                        fill: false,
+                        borderColor: '#D60031'
+                    },
+                    {
+                        label: 'Coinbase',
+                        data: [723, 684, 630, 459, 380, 302, 205],
+                        fill: false,
+                        borderColor: '#1A58CC'
+                    },
+                    {
+                        label: 'Cash',
+                        data: [75, 150, 15, 25, 100, 65, 45],
+                        fill: false,
+                        borderColor: '#9A9FBA'
                     }
                 ]
+            },
+            pieData: {
+                labels: ['Robinhood','TD Ameritrade','Wells Fargo', 'Coinbase', 'Cash'],
+                datasets: [
+                    {
+                        data: [5230, 3351, 7028, 205, 45],
+                        backgroundColor: [
+                            "#38E599",
+                            "#18BF1E",
+                            "#D60031",
+                            "1A58CC",
+                            "9A9FBA"
+                        ],
+                        hoverBackgroundColor: [
+                            "#92E5C1",
+                            "#65BF68",
+                            "#D65573",
+                            "6C8DCC",
+                            "CECECE"
+                        ]
+                    }]
             }
         };
 
@@ -149,7 +191,7 @@ export class Dashboard extends Component {
                     <div className="card summary">
                         <span className="title">Capital</span>
                         <span className="detail">Your total sum</span>
-                        <span className="count visitors">$12,050</span>
+                        <span className="count visitors">$15,859</span>
                     </div>
                 </div>
                 <div className="p-col-12 p-lg-4">
@@ -236,186 +278,29 @@ export class Dashboard extends Component {
                 </div>
 
 
-
-
-
-
-                <div className="p-col-12 p-md-6 p-lg-4">
-                    <Panel header="Tasks" style={{height: '100%'}}>
-                        <ul className='task-list'>
-                            <li>
-                                <Checkbox value="task1" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task1')>-1?true:false}></Checkbox>
-                                <span className="task-name">Sales Reports</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                            <li>
-                                <Checkbox value="task2" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task2')>-1?true:false}></Checkbox>
-                                <span className="task-name">Pay Invoices</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                            <li>
-                                <Checkbox value="task3" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task3')>-1?true:false}></Checkbox>
-                                <span className="task-name">Dinner with Tony</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                            <li>
-                                <Checkbox value="task4" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task4')>-1?true:false}></Checkbox>
-                                <span className="task-name">Client Meeting</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                            <li>
-                                <Checkbox value="task5" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task5')>-1?true:false}></Checkbox>
-                                <span className="task-name">New Theme</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                            <li>
-                                <Checkbox value="task6" onChange={this.onTaskChange} checked={this.state.tasks.indexOf('task6')>-1?true:false}></Checkbox>
-                                <span className="task-name">Flight Ticket</span>
-                                <Button icon="pi pi-check"/>
-                            </li>
-                        </ul>
-                    </Panel>
-                </div>
-
-                <div className="p-col-12 p-md-6 p-lg-4 p-fluid contact-form">
-                    <Panel header="Contact Us">
-                        <div className="p-grid">
-                            <div className="p-col-12">
-                                <Dropdown value={this.state.city} options={cities} placeholder="Select a City" onChange={this.onCityChange} autoWidth={false} />
-                            </div>
-                            <div className="p-col-12">
-                                <InputText type="text" placeholder="Name" />
-                            </div>
-                            <div className="p-col-12">
-                                <InputText type="text" placeholder="Age" />
-                            </div>
-                            <div className="p-col-12">
-                                <InputText type="text" placeholder="Message" />
-                            </div>
-                            <div className="p-col-12">
-                                <Button type="button" label="Send" icon="fa-send"/>
-                            </div>
-                        </div>
-                    </Panel>
-                </div>
-
-                <div className="p-col-12 p-lg-4 contacts">
-                    <Panel header="Contacts">
-                        <ul>
-                            <li>
-                                <a>
-                                    <img src="assets/layout/images/avatar_1.png" width="35" alt="avatar1"/>
-                                    <span className="name">Contact 1</span>
-                                    <span className="email">clare@pf-sigma.com</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="assets/layout/images/avatar_2.png" width="35" alt="avatar2"/>
-                                    <span className="name">Jason Dourne</span>
-                                    <span className="email">jason@pf-sigma.com</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="assets/layout/images/avatar_3.png" width="35" alt="avatar3"/>
-                                    <span className="name">Jane Davidson</span>
-                                    <span className="email">jane@pf-sigma.com</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <img src="assets/layout/images/avatar_4.png" width="35" alt="avatar4"/>
-                                    <span className="name">Tony Corleone</span>
-                                    <span className="email">tony@pf-sigma.com</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </Panel>
-                </div>
                 <div className="p-col-12 p-lg-6">
                     <div className="card">
-                        <h1 style={{fontSize:'16px'}}>Recent Transactions</h1>
-                        <DataTable value={this.state.cars}  style={{marginBottom: '20px'}} responsive={true}
-                                selectionMode="single" selection={this.state.selectedCar} onSelectionChange={(e) => this.setState({selectedCar: e.data})}>
-                            <Column field="source" header="Source" sortable={true} />
-                            <Column field="amount" header="Amount" sortable={true} />
-                            <Column field="time" header="Time" sortable={true} />
-                            <Column field="reason" header="Reason" sortable={false} />
-                        </DataTable>
-                    </div>
-                </div>
-                <div className="p-col-12 p-lg-6">
-                    <div className="card">
+                        <h1 className="centerText">Change</h1>
                         <Chart type="line" data={this.state.lineData}/>
                     </div>
                 </div>
-                <div className="p-col-12 p-lg-8">
-                    <Panel header="Calendar" style={{height: '100%'}}>
-                        <Schedule events={events} header={scheduleHeader} defaultDate="2017-02-01" eventLimit={4}></Schedule>
-                    </Panel>
+
+                <div className="p-col-12 p-lg-6">
+                    <div className="card">
+                        <h1 className="centerText">Breakdown</h1>
+                        <Chart type="doughnut" data={this.state.pieData} height="150"/>
+                    </div>
                 </div>
 
-                <div className="p-col-12 p-lg-4">
-                    <Panel header="Activity" style={{height:'100%'}}>
-                        <div className="activity-header">
-                            <div className="p-grid">
-                                <div className="p-col-6">
-                                    <span style={{fontWeight:'bold'}}>Last Activity</span>
-                                    <p>Updated 1 minute ago</p>
-                                </div>
-                                <div className="p-col-6" style={{textAlign:'right'}}>
-                                    <Button label="Refresh" icon="pi pi-refresh" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <ul className="activity-list">
-                            <li>
-                                <div className="count">$900</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Income</div>
-                                    <div className="p-col-6">95%</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="count" style={{backgroundColor:'#f9c851'}}>$250</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Tax</div>
-                                    <div className="p-col-6">24%</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="count" style={{backgroundColor:'#20d077'}}>$125</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Invoices</div>
-                                    <div className="p-col-6">55%</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="count" style={{backgroundColor:'#f9c851'}}>$250</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Expenses</div>
-                                    <div className="p-col-6">15%</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="count" style={{backgroundColor:'#007be5'}}>$350</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Bonus</div>
-                                    <div className="p-col-6">5%</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="count" style={{backgroundColor:'#ef6262'}}>$500</div>
-                                <div className="p-grid">
-                                    <div className="p-col-6">Revenue</div>
-                                    <div className="p-col-6">25%</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </Panel>
+                <div className="p-col-12 p-g-6">
+                <div className="card">
+                    <h1>Progress</h1>
+                    <ProgressBar value={34}/>
                 </div>
+                </div>
+
+
+
             </div>
         );
     }

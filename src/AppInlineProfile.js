@@ -20,10 +20,10 @@ export class AppInlineProfile extends Component {
         return  (
             <div className="profile">
                 <div>
-                    <img src="assets/layout/images/profile2.png" alt="" />
+                    <img src="assets/layout/images/cat.png" alt="" />
                 </div>
                 <a className="profile-link" onClick={this.onClick}>
-                    <span className="username">Sohan Choudhury</span>
+                    <span className="username">Cat Branchman</span>
                     <i className="pi pi-fw pi-cog"/>
                 </a>
                 <ul className={classNames({'profile-expanded': this.state.expanded})}>
