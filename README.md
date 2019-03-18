@@ -1,4 +1,4 @@
-PIFI is a personal finance tracker that says goodbye convoluted spreadsheets. With a simple UI and visualization tools to help track the metrics that matter most, PIFI will help you to track progress and save that bread.
+PIFI is a personal finance tracker that says goodbye convoluted spreadsheets. With a simple UI and visualization tools to visualize the metrics that matter most, PIFI will help you to track progress and save that bread.
 
 I'm currently working on PIFI in my free time, and aim to expand this to a publicly hosted tool. For now, my development goals are the following:
 
